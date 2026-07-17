@@ -1,0 +1,7 @@
+DistroClip includes PdfPig 0.1.15.
+
+Project: https://github.com/UglyToad/PdfPig
+Package: https://www.nuget.org/packages/PdfPig/0.1.15
+License: Apache License 2.0
+
+The license and required notices from PdfPig's pinned source commit are provided under the licenses folder alongside the application.
