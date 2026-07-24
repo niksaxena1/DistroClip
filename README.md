@@ -13,6 +13,7 @@ This build is a single 5.7 MB executable for this PC. It requires Windows 10/11 
 1. Type any part of an artist name or track title. Accents and common special letters are search-friendly, so `saimoo` finds `Saimöö`, `pharo` finds `PHARØ`, and `ae` finds `Æ`.
 2. Choose a result with the mouse, or use the arrow keys and Enter.
 3. Click a track title, name chip, or credits block to copy it. The small copy button beside a name row copies the whole comma-separated line.
+   Click the tiny scissors beside **LEGAL NAMES** or **SONGWRITERS** to toggle that section between full names and compact split-name chips. Each person stays in one chip: click the left side to copy the first name or the right side to copy all remaining names as the last name. A dashed divider separates the two sides.
 4. Drag the artwork or WAV card directly onto a distributor's browser file field. A simple click copies the file to the Windows clipboard; double-clicking opens it.
 5. Click the release card at the top to open the release folder in Explorer — its tooltip shows the full path. Use the contract icon beside the release heading to open its PDF.
 
