@@ -48,6 +48,19 @@ Artwork is fingerprinted in the background (a perceptual hash per release, cache
 - A WAV with no M-version is not selected automatically; the app warns you instead.
 - Square, high-resolution artwork is preferred. Social banners, revenue-share request images, mockups, and V Layers files are excluded.
 
+## In-app shortcuts
+
+- **Ctrl+click** a chip to copy · suggested **Cat ★** to write catalog to the sheet · a WAV card to audition
+- **Ctrl+Shift+click** a WAV (or BOTH WAVS) to save a lossless FLAC to the Desktop
+- **Drag** artwork / WAV cards into browsers or folders
+- **Click** Ext ISRC **none** to paste a new value and write it to the sheet
+
+A matching cheat-sheet lives in **Settings**.
+
+## Source
+
+Application source is kept in a private mirror: [niksaxena1/DistroClip-src](https://github.com/niksaxena1/DistroClip-src). This repository holds the published Windows build.
+
 ## Assign a keyboard shortcut
 
 1. First move the DistroClip folder to a permanent local location. Right-click `DistroClip.exe`, choose **Show more options**, then **Send to > Desktop (create shortcut)**.
