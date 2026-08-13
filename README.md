@@ -17,6 +17,14 @@ This build is a single 5.7 MB executable for this PC. It requires Windows 10/11 
 4. Drag the artwork or WAV card directly onto a distributor's browser file field. A simple click copies the file to the Windows clipboard; double-clicking opens it.
 5. Click the release card at the top to open the release folder in Explorer — its tooltip shows the full path. Use the contract icon beside the release heading to open its PDF.
 
+### Temporary image references (Pinterest → Midjourney)
+
+Drag a Pinterest or other browser image anywhere over DistroClip. The normal release details temporarily become a **References** tray while the search and scratchpad stay visible. DistroClip resolves the browser's link/HTML/virtual-file payload into a real JPEG, PNG, GIF, or WebP file, avoiding the `text/html` error produced by a direct Pinterest-to-Midjourney drag.
+
+Each new image starts selected. Use its check button to include or exclude it, then drag any selected image or the **DRAG N SELECTED IMAGES** bar to hand the whole selection to Midjourney in one drop. Dragging an unselected image sends that image alone. The × removes one image; **Clear** or **Back** clears the tray and restores the previous release. Typing in Search leaves the tray in place, while choosing a search result clears it and opens that release.
+
+References are session-temporary: up to 24 images, 10 MB each, and 200 MB total are stored under `%TEMP%\DistroClip\References`. Files that were never dragged out are deleted as soon as they leave the tray or DistroClip closes. After a successful drag, DistroClip keeps only a 10-minute upload-safe copy so the receiving browser has time to finish reading it; a hidden cleanup helper removes it even if DistroClip is closed. A later launch also sweeps abandoned crash leftovers.
+
 The window starts at the right edge of the screen and can be dragged by its title bar. Its position is remembered. Hover over the thin bottom edge when you want to see the current index status and release count.
 
 An amber **COVER** badge appears when a root-level Easy Song Proof of Licensing PDF is present. Click the badge to open that license, or drag the badge onto a distributor's browser file field to hand over the license PDF, exactly like the artwork and WAV cards. Songwriter names then appear from its `By ...` block. Warnings are shown when a PDF is unreadable or a choice needs verification.
@@ -53,6 +61,7 @@ Artwork is fingerprinted in the background (a perceptual hash per release, cache
 - **Ctrl+click** a chip to copy · suggested **Cat ★** to write catalog to the sheet · a WAV card to audition
 - **Ctrl+Shift+click** a WAV (or BOTH WAVS) to save a lossless FLAC to the Desktop
 - **Drag** artwork / WAV cards into browsers or folders
+- **Drop** web images into DistroClip to open References; drag a selected tile to send the selected batch
 - **Click** Ext ISRC **none** to paste a new value and write it to the sheet
 
 A matching cheat-sheet lives in **Settings**.
@@ -71,7 +80,7 @@ DistroClip is single-instance. Launching it through the shortcut while it is alr
 
 ## Local files
 
-Settings, the crash log, and the original-artist cache are stored under `%LocalAppData%\DistroClip`. No release, contract, or usage data is uploaded anywhere by the app. The one exception: the first time a cover release is opened, its licensed song title and songwriter names are sent to MusicBrainz (musicbrainz.org) and Wikidata to identify the original recording; the answer is cached locally so the question is asked only once per song.
+Settings, the crash log, and the original-artist cache are stored under `%LocalAppData%\DistroClip`. No release, contract, or usage data is uploaded anywhere by the app. The one exception: the first time a cover release is opened, its licensed song title and songwriter names are sent to MusicBrainz (musicbrainz.org) and Wikidata to identify the original recording; the answer is cached locally so the question is asked only once per song. When a browser drop supplies only an image URL, References downloads that public URL directly without browser cookies; local and private-network addresses are rejected.
 
 ## Troubleshooting
 
